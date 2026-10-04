@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+
+body {
+    background: #111;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+}
+
+#puan {
+    font-size: 30px;
+}
+
+#hedef {
+    position: absolute;
+
+    width: 70px;
+    height: 70px;
+
+    background: red;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Tıklama Oyunu</h1>
+
+<div id="puan">
+    Puan: 0
+</div>
+
+<div id="hedef"></div>
+
+<script>
+
+let puan = 0;
+
+let hedef =
+document.getElementById("hedef");
+
+hedef.onclick = function() {
+
+    puan++;
+
+    document.getElementById("puan")
+    .innerHTML =
+        "Puan: " + puan;
+
+    hedef.style.left =
+        Math.random() * 90 + "vw";
+
+    hedef.style.top =
+        Math.random() * 80 + "vh";
+};
+
+</script>
+
+</body>
+</html>
